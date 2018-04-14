@@ -1,0 +1,25 @@
+{
+  "name": "the-thing",
+  "version": "1.0.0",
+  "description": "> the maker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QaysTrad/MVP-Project.git"
+  },
+  "author": "QaysTrad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QaysTrad/MVP-Project/issues"
+  },
+  "homepage": "https://github.com/QaysTrad/MVP-Project#readme",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.14"
+  }
+}
