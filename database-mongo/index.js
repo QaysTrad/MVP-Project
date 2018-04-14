@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
-
 var db = mongoose.connection;
 
 db.on('error', function() {
@@ -12,13 +11,13 @@ db.once('open', function() {
 });
 
 var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
+  name: String,
+  password: String
 });
 
 var Item = mongoose.model('Item', itemSchema);
 
-var selectAll = function(callback) {
+var save = function(callback) {
   Item.find({}, function(err, items) {
     if(err) {
       callback(err, null);
@@ -28,4 +27,5 @@ var selectAll = function(callback) {
   });
 };
 
-module.exports.selectAll = selectAll;
+module.exports.save = save;
+module.exports.Item = Item;
