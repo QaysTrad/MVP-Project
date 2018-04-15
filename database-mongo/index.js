@@ -12,25 +12,14 @@ db.once('open', function() {
 
 var userSchema = mongoose.Schema({
   username: String,
-  password: String
-});
-
-var itemSchema = mongoose.Schema({
+  password: String,
   item: String,
   price: String
 });
 
 var User = mongoose.model('User', userSchema);
-var Item = mongoose.model('Item', userSchema);
 
-var saveUser = function(data , callback) {
-  var user = User(data)
-  user.save(function(err , elem){
-    if(err){callback(err , null)}
-      callback(null , elem)
-  })
-};
-var saveItem = function(data , callback) {
+var save = function(data , callback) {
   var user = User(data)
   user.save(function(err , elem){
     if(err){callback(err , null)}
@@ -38,8 +27,5 @@ var saveItem = function(data , callback) {
   })
 };
 
-module.exports.saveUser = saveUser;
-module.exports.saveItem = saveItem;
-
+module.exports.save = save;
 module.exports.User = User;
-module.exports.Item = Item;

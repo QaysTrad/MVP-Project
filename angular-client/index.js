@@ -22,5 +22,26 @@ app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http ) {
 			console.log('err')
 		})
 	}
-	
+	$scope.done = function () {
+		var req = {
+			method :'POST',
+			url : '/users',
+			data :{
+				item : $scope.item , 
+				price : $scope.price
+			}
+		}
+		$http(req).then(function () {
+			console.log('success')
+		},function () {
+			console.log('err')
+		})
+	}
+		var recieve = {
+			method :'GET',
+			url : '/users'
+		}
+		$http(recieve).then(function (data) {
+			console.log(data)
+			})
 }])

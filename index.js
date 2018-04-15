@@ -11,18 +11,20 @@ app.use(bodyParser())
 
 app.post('/users', function (req, res) {
 	console.log(req.body)
-	db.saveUser(req.body , function (err , data) {
+	db.save(req.body , function (err , data) {
 		if(err){res.send(err)}
 			res.send(data)
 	})
 });
+app.get('/users' , function (req , res) {
+	db.User.find(function (err , data) {
+		if(err){res.send(err)}
+			res.send(data)
+	})
+})
 
 app.get("/app", function (req,res) {
     // res.redirect('/templates/app.html');
-});
-
-
-app.get('/users', function (req, res) {
 });
 
 
