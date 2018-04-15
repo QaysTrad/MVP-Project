@@ -1,6 +1,12 @@
-var app = angular.module('shop', []);
+var app = angular.module('shop', ["ngRoute"]);
 
-app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http) {
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/sign", {
+        templateUrl : "app.html"
+    })
+});
+app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http ) {
 	$scope.signclick = function () {
 		var req = {
 			method :'POST',
@@ -16,4 +22,5 @@ app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http) {
 			console.log('err')
 		})
 	}
+	
 }])
