@@ -46,7 +46,8 @@ app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http ) {
 		$http(recieve).then(function (data) {
 			var arr = [];
 			for (var i = 0; i < data['data'].length; i++) {
-				if(!data['data'].hasOwnProperty('username'))
+				if(!data['data'][i].hasOwnProperty('username'))
+					
 				arr.push(data['data'][i])
 			}
 			$scope.items = arr
