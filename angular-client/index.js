@@ -32,16 +32,27 @@ app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http ) {
 			}
 		}
 		$http(req).then(function () {
-			console.log('success')
+			console.log('success' )
 		},function () {
 			console.log('err')
 		})
+		rec()
 	}
+	var rec = function () {
 		var recieve = {
 			method :'GET',
 			url : '/users'
 		}
 		$http(recieve).then(function (data) {
-			console.log(data)
+			var arr = [];
+			for (var i = 0; i < data['data'].length; i++) {
+				if(!data['data'].hasOwnProperty('username'))
+				arr.push(data['data'][i])
+			}
+			$scope.items = arr
 			})
+	}
+	$scope.init = function () {
+		rec();
+	}	
 }])
