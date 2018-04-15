@@ -10,22 +10,20 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var itemSchema = mongoose.Schema({
-  name: String,
+var userSchema = mongoose.Schema({
+  username: String,
   password: String
 });
 
-var Item = mongoose.model('Item', itemSchema);
+var User = mongoose.model('User', userSchema);
 
-var save = function(callback) {
-  Item.find({}, function(err, items) {
-    if(err) {
-      callback(err, null);
-    } else {
-      callback(null, items);
-    }
-  });
+var save = function(data , callback) {
+  var user = User(data)
+  user.save(function(err , elem){
+    if(err){callback(err , null)}
+      callback(null , elem)
+  })
 };
 
 module.exports.save = save;
-module.exports.Item = Item;
+module.exports.User = User;

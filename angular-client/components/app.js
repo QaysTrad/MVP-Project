@@ -1,5 +1,4 @@
-angular.module('app' )
+angular.module('shop' )
 .component('app' , {
-	
- templateUrl: '/templates/app.html'
+	 templateUrl: '/templates/app.html'
 })
