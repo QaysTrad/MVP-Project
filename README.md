@@ -1,23 +1,22 @@
-# El Tabik #
+# Lucifer #
  
 ## Heading ##
-  > the maker
+  > Lucifer Store
 
 ## Sub-Heading ##
-  > to people who's entersted in the social
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > anyone want to to sell the things he want
 
 ## Summary ##
-  > 
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > make the saller and the buyer easy to access between them
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > the problem is time consumption and trust issues
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > good timing and no need to trust the saller or the buyer
 
 ## Quote from You ##
+  > 
   > A quote from a spokesperson in your company.
 
 ## How to Get Started ##

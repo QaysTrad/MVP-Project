@@ -8,6 +8,7 @@ app.config(function($routeProvider) {
 });
 app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http ) {
 	$scope.signclick = function () {
+		//Ajax
 		var req = {
 			method :'POST',
 			url : '/users',
@@ -47,7 +48,6 @@ app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http ) {
 			var arr = [];
 			for (var i = 0; i < data['data'].length; i++) {
 				if(!data['data'][i].hasOwnProperty('username'))
-					
 				arr.push(data['data'][i])
 			}
 			$scope.items = arr
