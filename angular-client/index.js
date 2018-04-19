@@ -40,6 +40,7 @@ app.controller('myctrl' , ['$scope' , '$http', function ($scope , $http ) {
 		rec()
 	}
 	var rec = function () {
+		//ajax GET
 		var recieve = {
 			method :'GET',
 			url : '/users'
